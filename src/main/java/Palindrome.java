@@ -44,7 +44,6 @@ public class Palindrome {
         for (int x=from, y=from; x<=to && y<=to; x++, y++) {
             Integer product = x * y;
             if(isPalindrome(product.toString())) {
-                //System.out.println("x: " + x + "y: "+y + "product: " + product);
                 Result result = getResult(x, y, product);
                 list.add(result);
             }
