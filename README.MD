@@ -1,0 +1,1 @@
+The object is to validate whether the value passed into method is a palindrome.
