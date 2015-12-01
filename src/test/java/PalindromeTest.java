@@ -11,6 +11,30 @@ public class PalindromeTest {
     public void isPalindrome_String() {
         String str = "alula";
         assertThat(Palindrome.isPalindrome(str)).isTrue();
+        assertThat(Palindrome2.isPalindrome(str)).isTrue();
+    }
+
+
+    @Test
+    public void isPalindrome_StringCaseInsensitive() {
+        String str = "moM";
+        assertThat(Palindrome.isPalindrome(str)).isTrue();
+        assertThat(Palindrome2.isPalindrome(str)).isTrue();
+    }
+
+    @Test
+    public void switchingString() {
+        String one="one";
+        String two="twenty";
+        String[] array = Palindrome.switchingStrings(one, two);
+        assertThat(array[0]).isEqualTo("twenty");
+        assertThat(array[1]).isEqualTo("one");
+    }
+
+    @Test
+    public void findLargestInteger() {
+        int result = Palindrome.findLargestInt(new int[] {-1, -3, 9,1,3,6,3,8});
+        assertThat(result).isEqualTo(9);
     }
 
     @Test
