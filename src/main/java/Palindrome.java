@@ -3,18 +3,31 @@ import java.util.List;
 
 public class Palindrome {
 
+    /**
+     * Accepts a string argument and determines if it is
+     * a palindrome or not
+     *
+     * @param str
+     * @return
+     */
     public static boolean isPalindrome(String str) {
         if (str == null) {
             return false;
         }
 
-        if (isCharsEqual(str)) return false;
+        if (! isCharsEqual(str)) return false;
 
         return true;
     }
 
+    /**
+     * Accepts a integer array and finds the largest value
+     * and returns this value
+     *
+     * @param data
+     * @return
+     */
     public static int findLargestInt(int[] data) {
-
         int largestInt = 0;
 
         for (int i=0; i < data.length; i++) {
@@ -25,6 +38,13 @@ public class Palindrome {
         return largestInt;
     }
 
+    /**
+     * Accepts two string arguments and returns them in reverse order
+     *
+     * @param strA
+     * @param strB
+     * @return
+     */
     public static String[] switchingStrings(String strA, String strB) {
         String a = strA;
         String b = strB;
@@ -34,13 +54,20 @@ public class Palindrome {
         return new String[]{ a, b };
     }
 
+    /**
+     * Accepts a integer argument and determines if it is
+     * a palindrome or not
+     *
+     * @param value
+     * @return
+     */
     public static boolean isPalindrome(Integer value) {
         if (value == null) {
             return false;
         }
 
         String str = value.toString();
-        if (isCharsEqual(str)) return false;
+        if (! isCharsEqual(str)) return false;
 
         return true;
     }
@@ -67,15 +94,23 @@ public class Palindrome {
         return result;
     }
 
+    /**
+     * Accepts a string and iterates across each character starting
+     * from the beginning and end of string and compares each character
+     * against the other for equality.
+     *
+     * @param str
+     * @return
+     */
     private static boolean isCharsEqual(String str) {
         for (int i = 0, j = str.length() - 1; i < j; i++, j--) {
             Character c = str.toLowerCase().charAt(i);
             Character c2 = str.toLowerCase().charAt(j);
 
             if (!c.equals(c2)) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 }
